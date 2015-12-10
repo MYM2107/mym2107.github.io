@@ -1,0 +1,342 @@
+<!-- INTRO
+================================================================= -->
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Global Grids : Populations at Risk</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0, maximum-scale=1 user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+
+    body
+
+    {
+        font-family: 'Abel', sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+
+    .img-cont {
+      margin-top: 135px;
+      margin-bottom: 100px;
+      line-height: 0;
+      width: 100% !important;
+      height: auto !important;
+      cursor:pointer;
+      
+       
+      -webkit-column-count: 8;
+      -webkit-column-gap:   0px;
+      -moz-column-count:    8;
+      -moz-column-gap:      0px;
+      column-count:         8;
+      column-gap:           0px; 
+    }
+
+    @media (max-width: 2400px) {
+      .img-cont {
+      -moz-column-count:    8;
+      -webkit-column-count: 8;
+      column-count:         8;
+      }
+
+      .img-cont img {
+      width: 100% !important;
+      height: auto !important;
+      cursor:pointer;
+    }      
+    }
+
+    @media (max-width: 1200px) {
+      .img-cont {
+      -moz-column-count:    8;
+      -webkit-column-count: 8;
+      column-count:         8;
+      }   
+    }
+
+    @media (max-width: 1000px) {
+      .img-cont {
+      -moz-column-count:    3;
+      -webkit-column-count: 3;
+      column-count:         3;
+      }    
+    }
+
+    @media (max-width: 800px) {
+      .img-cont {
+      -moz-column-count:    2;
+      -webkit-column-count: 2;
+      column-count:         2;
+      }     
+    }
+
+    @media (max-width: 400px) {
+      .img-cont {
+      -moz-column-count:    1;
+      -webkit-column-count: 1;
+      column-count:         1;
+      }
+    }    
+
+    .tooltip {
+        position: absolute;
+    }
+
+    .navbar-default {
+        background-color: #000000;
+        border-color: #F15C56;
+    }
+
+    .navbar-default 
+    .navbar-brand {
+        color: white;
+    }
+        
+    .navbar-default 
+    .navbar-brand:hover, 
+    .navbar-default 
+    .navbar-brand:focus {
+      color: #f39290;
+    }
+/*
+
+        .navbar-default 
+        .navbar-text {
+          color: #f7f7f7;
+        }
+*/
+    .navbar-default 
+    .navbar-nav > li > a {
+        color: white;
+    }
+
+    .navbar-default 
+    .navbar-nav > li > a:hover, 
+    .navbar-default 
+    .navbar-nav > li > a:focus {
+        color: #f39290;
+    }
+
+    .navbar-default 
+    .navbar-nav > li > 
+    .dropdown-menu {
+        background-color: #000000;
+    }
+
+    .navbar-default 
+    .navbar-nav > li > 
+    .dropdown-menu > li > a {
+        color: white;
+    }
+
+        .navbar-default 
+        .navbar-nav > li > 
+        .dropdown-menu > li > a:hover,
+        .navbar-default 
+        .navbar-nav > li > 
+        .dropdown-menu > li > a:focus {
+          color: #ffffff;
+          background-color: #303030;
+        }
+
+        .navbar-default 
+        .navbar-nav > li > 
+        .dropdown-menu > li > 
+        .divider {
+          background-color: #303030;
+        }
+
+        .navbar-default 
+        .navbar-nav > .active > a, 
+        .navbar-default .navbar-nav > 
+        .active > a:hover, 
+        .navbar-default 
+        .navbar-nav > 
+        .active > a:focus {
+          color: #ffffff;
+          background-color: #303030;
+        }
+
+        .navbar-default 
+        .navbar-nav > 
+        .open > a, 
+        .navbar-default 
+        .navbar-nav > 
+        .open > a:hover, 
+        .navbar-default 
+        .navbar-nav > 
+        .open > a:focus {
+          color: #ffffff;
+          background-color: #303030;
+        }
+
+        .navbar-default 
+        .navbar-toggle {
+          border-color: #303030;
+        }
+
+        .navbar-default 
+        .navbar-toggle:hover, 
+        .navbar-default 
+        .navbar-toggle:focus {
+          background-color: #303030;
+        }
+
+        .navbar-default 
+        .navbar-toggle 
+        .icon-bar {
+          background-color: #f7f7f7;
+        }
+
+        .navbar-default 
+        .navbar-collapse,
+        .navbar-default 
+        .navbar-form {
+          border-color: #f7f7f7;
+        }
+
+        .navbar-default 
+        .navbar-link {
+          color: #f7f7f7;
+        }
+
+        .navbar-default 
+        .navbar-link:hover {
+          color: #ffffff;
+        }
+
+
+        .navbar-fixed-top{
+            background: black;
+            color: black;
+            color: #eee;
+        } 
+
+        .navbar-fixed-bottom{
+            background: black;
+            color: white;
+            text-align: center;
+            min-height: 50px;
+            max-height: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body class="container">
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><small>Global Grids: Populations at Risk</small></a>
+        </div>
+
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">HOME</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="http://www.c4sr.columbia.edu" target="_blank" class="loginPopup">About Us</a></li>
+                <li><a href="Description.html" target="popup" onclick="window.open('Description.html', 'Description', 'width=400,height=800')" > Description </a>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    <div class="row">
+        <div class='img-cont col-md-6'>
+        </div>
+    </div> 
+
+        <div class="navbar-inverse navbar-fixed-bottom" role="navigation" class="visible-sm" class="visible-md" class="visible-lg">
+            <div class="container">
+                <div class="navbar-text">
+                <p> &copy; Center for Spatial Research, Columbia University</p>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+
+// initialize to google or mapbox
+var service = 'mapbox',
+    options = {
+                    google:{
+                        source_dir: 'google_images/',
+                        source_dir_bw: 'google_images_bw/',
+                        extn: '.png'
+                    },
+                    mapbox:{
+                        source_dir: 'map_ma2/',
+                        source_dir_bw: 'map_ma1/',
+                        extn: '.jpg'                    
+                    }
+                };
+
+d3.csv('citysample1E.csv', function(d){
+    d.Long = +d.Long;
+    d.Lat = +d.Lat;
+    return d;
+}, function(err, data){
+
+    if(err) return console.log("Error Reading File: " + err.statusText);
+
+    d3.select('.img-cont')
+        .selectAll('img')
+        .data(data)
+        .enter().append('img')
+        .attr('src', function(d){ return options[service].source_dir + d.Name+'_'+d.Lat+'_'+d.Long + options[service].extn})
+        .attr('title', function(d){ 
+            return "<table><thead><tr><th>Nuclear Site</th></tr></thead>"+
+                    "<tr><td>Country: </td><td>"+d.Country+"</td></tr>"+
+                    "<tr><td>Plant Name: </td><td>"+d.Name+"</td></tr>"+
+                    "<tr><td>Pop (30km):</td><td>"+d.Pop+"</td></tr></tbody></table>";
+        })
+
+        .on('mousedown', function(d){
+          d3.select(this).attr('src', options[service].source_dir_bw + d.Name + '_'+d.Lat+'_'+d.Long + options[service].extn)
+        })
+
+        .on('mouseup', function(d){
+          d3.select(this).attr('src', options[service].source_dir + d.Name + '_'+d.Lat+'_'+d.Long + options[service].extn)
+        })           
+
+});
+
+$('body').tooltip({container: 'body', selector:'img', html:true});
+
+</script>
+</body>
+</html>
